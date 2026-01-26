@@ -1,0 +1,184 @@
+---
+title: "Initial Post"
+description: "A single post that shows almost all MDX features"
+date: "2026-01-09"
+author: "Jane Doe"
+coverImage: "/hero-image.jpg"
+---
+
+# MDX Full Example
+
+This is a **paragraph** with **bold**, _italic_, ~~strikethrough~~, and `inline code`.
+
+Here is a [link](https://example.com).
+
+---
+
+## Headings
+
+### H3 Heading
+
+#### H4 Heading
+
+##### H5 Heading
+
+###### H6 Heading
+
+---
+
+## Lists
+
+### Unordered list
+
+- Item one
+- Item two
+  - Nested item
+  - Another nested item
+- Item three
+
+### Ordered list
+
+1. First
+2. Second
+3. Third
+
+### Task list
+
+- [x] Done task
+- [ ] Not done task
+
+---
+
+## Blockquote
+
+> This is a blockquote
+> It can span multiple lines
+
+---
+
+## Code Blocks
+
+### JavaScript
+
+```js
+function add(a, b) {
+  return a + b;
+}
+```
+
+### Python
+
+```python
+def add(a, b):
+    return a + b
+```
+
+### Bash
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+### Code Blocks with Titles
+
+```python title="example.py"
+def greet(name):
+    return f"Hello, {name}!"
+```
+
+---
+
+## Tables
+
+| Name  | Role   | Age |
+| ----- | ------ | --- |
+| Alice | Admin  | 30  |
+| Bob   | User   | 25  |
+| Carol | Editor | 28  |
+
+---
+
+## Images
+
+![Dummy image](/hero-image.jpg)
+
+---
+
+## Horizontal Rule
+
+---
+
+## Inline HTML (allowed in MDX)
+
+<div style={{ padding: "12px", border: "1px solid #ccc" }}>
+  This is raw HTML inside MDX.
+</div>
+
+---
+
+## JSX Components (MDX power)
+
+---
+
+## Props and Expressions
+
+Current year: **{new Date().getFullYear()}**
+
+Math result: **{2 + 2}**
+
+---
+
+## Footnotes
+
+This is a sentence with a footnote.[^1]
+
+[^1]: This is the footnote text.
+
+---
+
+## Emojis
+
+Works like normal text 😄 🚀
+
+---
+
+## Escaping characters
+
+Use backslash to escape:
+_not italic_
+
+# not a heading
+
+---
+
+[//]: # "## Math (if your setup supports it)"
+[//]: #
+[//]: # "Inline math: $2 + 2 = 4$"
+[//]: #
+[//]: # "Block math:"
+[//]: #
+[//]: # "$$"
+[//]: # "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}"
+[//]: # "$$"
+[//]: #
+[//]: # "---"
+
+## Collapsible (HTML)
+
+<details>
+  <summary>Click to open</summary>
+  Hidden content goes here.
+</details>
+
+---
+
+## Final Section
+
+This file is intentionally long and noisy.
+
+If you understand **this one file**, you understand **MDX**.
+
+End of post.
