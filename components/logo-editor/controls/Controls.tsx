@@ -4,9 +4,9 @@ import { useState } from 'react';
 import Slider from '../../ui/slider';
 import IconsMenu from './IconsMenu';
 import ColorPickerNoSSR from './ColorPickerNoSSR';
+import { useLogoIconComponent } from '@/hooks/use-logo-icon-component';
 import useIconStore from '@/lib/store/iconStore';
 import useIconBackgroundStore from '@/lib/store/iconBackgroundStore';
-import { getLogoIconById } from '@/lib/logo-icons';
 
 const SHADOW_OPTIONS = ['NONE', 'SM', 'MD', 'LG', 'XL', '2XL'];
 
@@ -45,8 +45,7 @@ const Controls = () => {
 
   const [activePanel, setActivePanel] = useState<'icon' | 'background'>('icon');
   const [open, setOpen] = useState(false);
-  const selectedIcon = getLogoIconById(selectedIconId);
-  const SelectedIcon = selectedIcon.Icon;
+  const { Icon: SelectedIcon } = useLogoIconComponent(selectedIconId);
 
   const handleIconClick = () => {
     setActivePanel('icon');

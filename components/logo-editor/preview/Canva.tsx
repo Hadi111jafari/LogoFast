@@ -1,6 +1,6 @@
 'use client';
 
-import { getLogoIconById } from '@/lib/logo-icons';
+import { useLogoIconComponent } from '@/hooks/use-logo-icon-component';
 import { LOGO_EXPORT_TARGET_ID } from '@/lib/logo-editor';
 import useIconBackgroundStore from '@/lib/store/iconBackgroundStore';
 import useIconStore from '@/lib/store/iconStore';
@@ -47,9 +47,8 @@ const Canva = () => {
 	const backgroundPadding = useIconBackgroundStore((state) => state.padding);
 	const backgroundShadowIndex = useIconBackgroundStore((state) => state.shadow);
 	const backgroundColor = useIconBackgroundStore((state) => state.bgColor);
+	const { Icon: SelectedIcon } = useLogoIconComponent(selectedIconId);
 
-	const selectedIcon = getLogoIconById(selectedIconId);
-	const SelectedIcon = selectedIcon.Icon;
 	const shadowClass =
 		SHADOW_CLASSES[backgroundShadowIndex] ?? SHADOW_CLASSES[0];
 	const normalizedOpacity = Math.min(Math.max(iconFillOpacity, 0), 100) / 100;
