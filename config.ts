@@ -23,8 +23,8 @@ import { Tier } from "./types";
 
 // Change these to your own values
 const domain = "yourdomain.tld";
-const creatorName = "YourName";
-const appName = "YourApp";
+const creatorName = "";
+const appName = "LogoFast";
 
 export const config = {
   /**
